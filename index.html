@@ -3,41 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World.</title>
+    <title>2B.</title>
 
-    <link rel="icon" type="image/x-icon" href="img/Stamps.ico">
+    <link rel="icon" type="image/x-icon" href="Stamps.ico">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Noto+Sans+Mandaic&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-    <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
-    <script language="javascript" type="text/javascript" src="Week_5_Workshop.js"></script>
-
-<style>
-    *{
-        background-color: rgb(252, 148, 124);
+    <style>
+        *{
+        background-color: rgb(16, 13, 2);
     }
-    /*Styling components are inspired by, taken, and modified from isobell's github: https://isoebell.github.io/Interactive/2b.html*/
+    
     h1 {
         font-size: 5em;
         margin: 0;
         padding: 0;
         padding-left: 1%;
-        padding-bottom: 3.2%;
+        padding-bottom: 3%;
         font-family: 'DM Mono';
         font-weight: bold;
-        color: rgb(16, 13, 2);
+        color: rgb(252, 148, 124);
     }
-    h2 {
-        font-size: 1.5em;
+    p {
+        font-size: 0.9em;
         margin: 0;
         padding: 0;
         padding-left: 1%;
-        padding-top: 4%;
+        padding-top: 5%;
+        padding-bottom: 5%;
         font-family: 'DM Mono';
         font-weight: normal;
-        color: rgb(16, 13, 2);
+        color: rgb(252, 148, 124);
     }
     .custom-cursor {
         position: absolute;
@@ -47,80 +45,205 @@
         width: 30px;
         height: 30px;
     }
-    .page-navigation {
-        font-size: 1.5em;
+    /* The following code for collapsibles has been taken and modified from W3Schools' demo page: https://www.w3schools.com/howto/howto_js_collapsible.asp/*/
+    .collapsible {
+        background-color: rgb(16, 13, 2);
+        color: rgb(252, 148, 124) ;
+        cursor: pointer;
+        padding-top: 2%;
+        padding-right: 5%;
+        padding-left: 5%;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
         font-family: 'DM Mono';
         font-weight: normal;
-        padding: 0;
-        padding-right: 1.7%;
-        color: rgb(16, 13, 2);
-        position: relative;
-        display: flex;
-        align-items: center;
+        font-size: 1.5em;
+        cursor: url(Stamps-2-pix.png), pointer;
     }
-    .button {
+    .active, .collapsible:hover {
         background-color: rgb(16, 13, 2);
+    }
+    .collapsible:after {
+        content: '\002B';
+        color: rgb(252, 148, 124);
+        font-weight: normal;
+        float: right;
+        padding-left: 5%;
+    }
+    .active:after {
+        content: "\2212";
+        color: rgb(252, 148, 124);
+    }
+    .content {
         padding-top: 1%;
         padding-bottom: 1%;
         padding-right: 5%;
         padding-left: 5%;
-        margin-left: 1.4%;
-        width: 20vw;
-        border-radius: 10px;
-        max-width: 100%;
-        text-align: center;
-        cursor: url(img/Stamps-2-pix.png), pointer;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.2s ease-in-out;
+        background-color: rgb(16, 13, 2);
     }
-    .button a {
+    hr.solid {
+        width: 99%;
+        border: 1.5px solid rgb(252, 148, 124);
+        opacity: 80%;   
+    }
+    a, img {
+        width: 450px;
+        height: 100%;
+        border-radius: 10px;
+    }
+    a {
         background-color: rgb(16, 13, 2);
         color: rgb(252, 148, 124);
         text-decoration-color: rgb(16, 13, 2);
         cursor: pointer;
     }
-    iframe {
-        padding-top: 0;
-        padding-bottom: 0;
-        padding-left: 0.5%;
-        padding-right: 0.4%;
-        margin-left: 0.8%;
-        width: 45vh;
-        height: 16em;
-        border-radius: 5%;
-        max-width: 100%;
-        max-height: 100%;
-        border: transparent;
-        position: relative;
+    .links {
+        color: rgb(252, 148, 124);
+        text-decoration: underline;
     }
-    .page-navigation {
-        padding-top: 4.2%;
-        color: black;
+    /*The following code for adding stroke to web text has been taken and modified from: https://css-tricks.com/adding-stroke-to-web-text/*/
+    a.homepage-navigation:hover {
+        -webkit-text-fill-color: rgb(16, 13, 2);
+        -webkit-text-stroke: rgb(252, 148, 124);
+        -webkit-text-stroke-width: 0.2px;
+
     }
-</style>
+    .flex-container {
+        display: flex;
+        gap: 2%;
+        flex-wrap: nowrap;
+        padding-top: 1.6%;
+        padding-bottom: 2%;
+        background-color: rgb(16, 13, 2);
+        text-align: left;
+        align-items: center;
+    }
+    </style>
 </head>
-
 <body>
-    <h1>Hello World. Welcome to my folio for Interactive Media.</h1>
-    <div>
-        <iframe src="Week_5_Capture_HP/index.html"></iframe>
-    </div>
-    <div class="page-navigation">
-    <!--The following code has been taken and modified from isobell's github: https://isoebell.github.io/Interactive/2b.html-->
-        <div class="button">
-            <a href="https://aprilsofra.github.io/interactive-med/">2A</a>
+    <h1>Welcome to project 2B. <a class="homepage-navigation" href="https://aprilsofra.github.io/soaked-oats/">Click here to go back.</a></h1>
+
+    <hr class="solid">
+    <button class="collapsible">KUSAMA'S_ITERATIONS.</button>
+    <div class="content">
+        <div class="flex-container">
+        <a href="Week_4_Kusama_Dots/index.html" target="_blank">
+        <img src="Kusama-Dots.gif" alt="Task 1 GIF">
+        </a>
+        <p>In Week 4, we visited the Yayoi Kusama exhibit at the National Gallery of Victoria. As one of my favourite artists, it was so inspiring to view her work on such a large scale and truly feel a part of her polka-dot universe. In experimenting with p5.js, her works became a point of exploration in creating iterative modes of geometric structures and expression. Here, I chose to recreate her famous polka-dot infinity rooms.</p>
         </div>
 
-        <div class="button">
-            <a href="2B.Upload/index.html">2B</a>
-        </div>
-
-        <div class="button">
-            <a href="2C/index.html">2C</a>
-        </div>
-
-        <div class="button">
-            <a href="Research/index.html">RESEARCH</a>
+        <div class="flex-container">
+        <a href="Week_4_Workshop/index.html" target="_blank">
+        <img src="Kusama-Workshop_Stamps-2.gif" alt="Task 1 GIF">
+        </a>
+        <p>I then chose to explore this further with the integration of a preloaded image. This version slightly differs in frameRate, population, and size but ultimately aims to explore the same concept inspired by Kusama’s work.</p>
         </div>
     </div>
-    <h2>April Sofra. 1463700. Semester 1, 2025.</h2>
+
+    <hr class="solid">
+    <button class="collapsible">IMAGE_REVEAL.</button>
+    <div class="content">
+        <div class="flex-container">
+        <a href="Week_5_Workshop/index.html" target="_blank">
+        <img src="Img-Reveal_Stampy.gif" alt="Task 1 GIF">
+        </a>
+        <p>Expanding upon this idea of the preLoad function, we began to experiment with the ways in which images can be incorporated as an interactive feature within code. This particular sketch uses the draw function for users to reveal the image underneath.</p>
+        </div>
+    </div>
+
+    <hr class="solid">
+    <button class="collapsible">WEBCAM_PAINTING.</button>
+    <div class="content">
+        <div class="flex-container">
+        <a href="Week_6_Webcam_Paint/index.html" target="_blank">
+        <img src="Capture-Painting_Miffy.gif" alt="Task 1 GIF">
+        </a>
+        <p>Week 5 began to integrate features such as the camera and microphone as a way of exploring more direct forms of interactivity. In this particular sketch, I enabled the capture function to record users as they drag their mouse over the page, allowing the integrated window to follow the cursor as it moves. The addition of a smaller frameRate creates a glitchy, nostalgic feel reminiscent of the early 2000s.</p>
+        </div>
+    </div>
+    <hr class="solid">
+
+    <button class="collapsible">HTML_BUTTONS.</button>
+    <div class="content">
+        <div class="flex-container">
+        <a href="Week_6_HTML_Buttons/index.html" target="_blank">
+        <img src="No_This_Button.gif" alt="Task 1 GIF">
+        </a>
+        <p>In Week 6, we began to explore communication between p5 and VS Code to develop sketches further. This particular sketch uses both p5.js and HTML to create an iterative display of buttons that randomly appear each time one is pressed by the user. The use of the spawn function facilitates the randomised placement of each button.</p>
+        </div>
+    </div>
+    <hr class="solid">
+
+    <button class="collapsible">POINTILISM.</button>
+    <div class="content">
+        <div class="flex-container">
+        <a href="Week_5_Dot_Colour/index.html" target="_blank">
+        <img src="Pointilism_Stamps.gif" alt="Task 1 GIF">
+        </a>
+        <p>A return back to the ideas explored in week 4, preloaded images were used to execute the concept of ‘pointilism’: an interactive feature that involves the progression of circular dots to appear within the canvas, ultimately revealing the chosen image.</p>
+        </div>
+    </div>
+    <hr class="solid">
+
+    <button class="collapsible">SPEECH_RECOGNITION.</button>
+    <div class="content">
+        <div class="flex-container">
+        <a href="Week_6_Speech_Recognition/index.html" target="_blank">
+        <img src="Speech_Recognition.gif" alt="Task 1 GIF">
+        </a>
+        <p>Week 6 saw an integration of interactive features such as speech recognition through the integration of the microphone feature. This sketch was a particularly challenging one for me to navigate, drawing upon multiple sources of code to achieve my desired outcome of accurately translating speech-to-text in real time. These sources include <a class="links" href="https://github.com/karenanndonnachie/MESS_IS_MORE/tree/main/P5JS/CHAPTER_3_SOUND/Speech" target="_blank">Karen Ann's Github archive</a> as well as a <a class="links" href="https://editor.p5js.org/ziyu/sketches/rJCJtGTMx" target="_blank">p5 sketch by the artist 'ziyu'</a>.</p>
+        </div>
+    </div>
+    <hr class="solid">
+
+    <button class="collapsible">INTEGRATING_SOUND.</button>
+    <div class="content">
+        <div class="flex-container">
+        <a href="Week_6_Song_Test/index.html" target="_blank">
+        <img src="Song_Mapping.gif" alt="Task 1 GIF">
+        </a>
+        <p>Exploring the preLoad function further, we began to import sound into p5 as a way of mapping text to its properties. This first sketch displays text size and rotation being mapped to the volume of the imported sound. The sound I imported is an original made on Logic Pro X a while ago. The code for this sketch was sourced directly from <a class="links" href="https://github.com/karenanndonnachie/MESS_IS_MORE/tree/main/P5JS/CHAPTER_3_SOUND/soundTest" target="_blank">Karen Ann's github archive</a> and modified to achieve my desired outcome.</p>
+        </div>
+
+        <div class="flex-container">
+            <a href="Week_6_Song_Img/index.html" target="_blank">
+            <img src="Song_Capture_2.gif" alt="Task 1 GIF">
+            </a>
+            <p>As an extension of this in-class activity, I decided to integrate the camera feature in order to map the variable capture to the volume of the same sound. Using filter and opacity features allowed me to create a moody effect that I thought added a nice touch. Using the same bones of code as the previous sketch, I integrated additional lines to integrate the webcame feature as seemlessly as possible.</p>
+            </div>
+    </div>
+    <hr class="solid">
+
+    <button class="collapsible">WHAT'S_IN_MY_BAG.</button>
+    <div class="content">
+        <div class="flex-container">
+        <img src="Panorama.jpeg" alt="Task 1 GIF">
+        </a>
+        <p>A non-interactive task during week 6 included the removal and display of every item within the bags we brought to class that day. In an attempt to organise each item into categorised groups, my group decided to display all of our combined items from ‘most likely to sell’ to ‘least likely to sell’. This panorama attempts to capture each item that we included within our display.</p>
+        </div>
+    </div>
+    <hr class="solid">
+<!--Copy and pasted directly from W3Schools' demo page for collapsibles-->
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
 </body>
 </html>
