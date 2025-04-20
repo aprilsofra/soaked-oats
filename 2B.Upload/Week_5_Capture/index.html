@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="Week_5_Capture.js"></script>
+  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    h1 {
+        font-size: 5em;
+        margin: 0;
+        padding: 0;
+        padding-left: 1%;
+        padding-bottom: 3.2%;
+        font-family: 'DM Mono';
+        font-weight: bold;
+        color: rgb(16, 13, 2);
+    }
+    h2 {
+        background: rgb(16, 13, 2);
+        font-size: 1.5em;
+        margin: 0;
+        padding: 0;
+        padding-left: 1%;
+        padding-top: 1%;
+        font-family: 'DM Mono';
+        font-weight: bold;
+        color: rgb(252, 148, 124);
+    }
+    p {
+        background: rgb(16, 13, 2);
+        font-size: 0.9em;
+        margin: 0;
+        padding: 0;
+        padding-left: 1%;
+        padding-top: 5%;
+        padding-bottom: 10%;
+        font-family: 'DM Mono';
+        font-weight: normal;
+        color: rgb(252, 148, 124);
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Here are some lines of code I used for this sketch.</h2>
+  <p>
+    var capture; <br>
+    <br>
+    function setup() { <br>
+      createCanvas(windowWidth, windowHeight); <br>
+      background(255); <br>
+      capture = createCapture(VIDEO); <br>
+      capture.size(640,480); <br>
+      capture.hide(); <br>
+      imageMode(CENTER); <br>
+      frameRate(4); <br>
+    } <br>
+    <br>
+    function draw() { <br>
+      image(capture, mouseX, mouseY, capture.width, capture.height); <br>
+      filter(GRAY); <br>
+    } <br>
+</body>
+</html>
