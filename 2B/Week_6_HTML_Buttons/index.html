@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="Week_6_HTML_Buttons.js"></script>
+  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    button {
+      margin-top: 44.5%;
+      background-color: rgb(16, 13, 2);
+      color: rgb(252, 148, 124);
+      border: none;
+      border-radius: 5px;
+      position: absolute;
+      object-fit: fill;
+      padding-top: 0.4%;
+      padding-bottom: 0.4%;
+    }
+    h1 {
+        font-size: 5em;
+        margin: 0;
+        padding: 0;
+        padding-left: 1%;
+        padding-bottom: 3.2%;
+        font-family: 'DM Mono';
+        font-weight: bold;
+        color: rgb(16, 13, 2);
+    }
+    h2 {
+        background: rgb(16, 13, 2);
+        font-size: 1.5em;
+        margin: 0;
+        padding: 0;
+        padding-left: 1%;
+        padding-top: 1%;
+        font-family: 'DM Mono';
+        font-weight: bold;
+        color: rgb(252, 148, 124);
+    }
+    p {
+        background: rgb(16, 13, 2);
+        font-size: 0.9em;
+        margin: 0;
+        padding: 0;
+        padding-left: 1%;
+        padding-top: 5%;
+        padding-bottom: 10%;
+        font-family: 'DM Mono';
+        font-weight: normal;
+        color: rgb(252, 148, 124);
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+  <h2>Here are some lines of code I used for this sketch.</h2>
+  <p>
+    var button, otherbutton; <br>
+    <br>
+    function setup() { <br>
+      createCanvas(windowWidth, windowHeight); <br>
+      background(252, 148, 124); <br>
+      let button=createButton("PRESS THIS BUTTON"); <br>
+      button.position(width/2.27, height/2.13); <br>
+      button.mousePressed(spawn); <br>
+    } <br>
+    <br>
+    function windowResized(){ <br>
+     resizeCanvas(windowWidth, windowHeight); <br>
+     background(252, 148, 124); <br>
+    } <br>
+    <br>
+    function spawn(){ <br>
+      background(252, 148, 124); <br>
+      let otherbutton=createButton("NO THIS BUTTON"); <br>
+      otherbutton.position(random(width), random(height)); <br>
+      otherbutton.mousePressed(spawn); <br>
+    } <br>
+  </div>
+</body>
+</html>
