@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5.sound.min.js"></script>
+  <script language="javascript" type="text/javascript" src="Week_6_Song_Img.js"></script>
+  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+    h1 {
+        font-size: 5em;
+        margin: 0;
+        padding: 0;
+        padding-left: 1%;
+        padding-bottom: 3.2%;
+        font-family: 'DM Mono';
+        font-weight: bold;
+        color: rgb(16, 13, 2);
+    }
+    h2 {
+        background: rgb(16, 13, 2);
+        font-size: 1.5em;
+        margin: 0;
+        padding: 0;
+        padding-left: 1%;
+        padding-top: 1%;
+        font-family: 'DM Mono';
+        font-weight: bold;
+        color: rgb(252, 148, 124);
+    }
+    p {
+        background: rgb(16, 13, 2);
+        font-size: 0.9em;
+        margin: 0;
+        padding: 0;
+        padding-left: 1%;
+        padding-top: 5%;
+        padding-bottom: 10%;
+        font-family: 'DM Mono';
+        font-weight: normal;
+        color: rgb(252, 148, 124);
+    }
+  </style>
+</head>
+
+<body>
+  <h2>Here are some lines of code I used for this sketch.</h2>
+  <p>
+    var song; <br>
+    var capture; <br>
+    var analyzer; <br>
+    <br>
+    function preload() { <br>
+      song = loadSound ('data/zero-gravity.wav'); <br>
+    } <br>
+    <br>
+    function setup() { <br>
+      createCanvas (windowWidth, windowHeight); <br>
+      capture = createCapture(VIDEO); <br>
+      capture.hide(); <br>
+      analyzer = new p5.Amplitude(); <br>
+      analyzer.setInput(song); <br>
+      imageMode(CENTER, CENTER); <br>
+      fill(16, 13, 2); <br>
+      textSize(30); <br>
+      textAlign(CENTER, CENTER); <br>
+    } <br>
+    <br>
+    function draw() { <br>
+      background(255, 10); <br>
+      var volume = analyzer.getLevel(); <br>
+      volume*=700; <br>
+      image(capture,width/2,height/2,volume,volume); <br>
+      filter(GRAY); <br>
+      image(capture, volume*2); <br>
+      translate(width/2,height/2); <br>
+      textX=map(volume, 0, 400, 0, windowWidth); <br>
+      textY=map(volume, 0, 400, 0, windowHeight); <br>
+    } <br>
+    <br>
+    function mousePressed() { <br>
+      if (song.isPlaying()) { <br>
+        song.stop(); <br>
+        song.noLoop(); <br>
+      } <br>
+      else { <br>
+        song.loop(); <br>
+        song.play(); <br>
+      } <br>
+    } <br>
+</body>
+</html>
