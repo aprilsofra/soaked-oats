@@ -17,6 +17,7 @@
 <style>
     *{
         background-color: rgb(252, 148, 124);
+        cursor: url(img/Stamps-2-pix.png) 35 55, auto;
     }
     /*Styling components are inspired by, taken, and modified from isobell's github: https://isoebell.github.io/Interactive/2b.html*/
     h1 {
@@ -38,15 +39,6 @@
         font-family: 'DM Mono';
         font-weight: normal;
         color: rgb(16, 13, 2);
-    }
-    .custom-cursor {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        display: none;
-        width: 30px;
-        height: 30px;
     }
     .page-navigation {
         font-size: 1.5em;
@@ -70,12 +62,13 @@
         border-radius: 10px;
         max-width: 100%;
         text-align: center;
+        cursor: pointer;
     }
     .button a {
         background-color: rgb(16, 13, 2);
         color: rgb(252, 148, 124);
         text-decoration-color: rgb(16, 13, 2);
-        cursor: url(img/Stamps-2-pix.png), pointer;
+        cursor: pointer;
     }
     iframe {
         padding-top: 0;
