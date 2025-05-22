@@ -142,6 +142,7 @@
         -webkit-text-stroke-width: 0.2px;
     }
     .flex-container {
+        width: 100%;
         display: flex;
         gap: 2%;
         flex-wrap: nowrap;
@@ -151,7 +152,6 @@
         text-align: left;
         align-items: center;
     }
-
     .flow {
         position: relative;
         width: 100%;
@@ -161,7 +161,8 @@
     .flowboxes {
         position: relative;
         width: 100%;
-        display: grid;
+        display: flex;
+        flex-direction: row;
         justify-content: center;
         margin-top: 0px;
         margin-right: auto;
@@ -169,7 +170,7 @@
         margin-left: auto;
         grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
         row-gap: 10px;
-        column-gap: 10px;
+        column-gap: 35px;
         justify-items: center;
         font-family: 'DM Mono';
         font-weight: normal;
@@ -187,7 +188,7 @@
         height: 250px;
         object-fit: cover;
         cursor: url(Stamps.ico), pointer;
-     }
+    }
     </style>
 </head>
 <body>
@@ -280,33 +281,24 @@
     <hr class="solid">
 
     <div class="flow">
-    <h2>Here are some errors I had to troubleshoot.</h2>
+    <h2>Here are some recent developments /<br>errors I had to troubleshoot.</h2>
     <br>
     <div id="flowboxes" class="flowboxes">
         <div class="floating-box">
             <img src="Responsive_issue.gif" class="case-study" alt="Image of Case Study">
             <hr class="linebreak">
             </a>
-            <p>Paragraph here.</p>
+            <p>Issues with site responsiveness for the flex containers I set up.</p>
         </div>
 
-        <div id="flowboxes" class="flowboxes">
         <div class="floating-box">
             <img src="Screenshot_2025-05-21.jpg" class="case-study">
             <hr class="linebreak">
             </a>
-            <p>Paragraph here.</p>
+            <p>Me trialling  photobooth functions using p5.js to potentially integrate into my landing page.</p>
         </div>
-        </div>
+    </div>
 
-        <div id="flowboxes" class="flowboxes">
-        <div class="floating-box">
-            <img src="Responsive_issue.gif" class="case-study" alt="Image of Case Study">
-            <hr class="linebreak">
-            </a>
-            <p>Paragraph here.</p>
-        </div>
-        </div>
     </div>
 
     <div class="flow">
