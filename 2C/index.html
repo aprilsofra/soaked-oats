@@ -7,6 +7,10 @@
 
     <link rel="icon" type="image/x-icon" href="Stamps.ico">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Noto+Sans+Mandaic&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
     <style>
         *{
         background-color: rgb(16, 13, 2);
@@ -22,9 +26,333 @@
         font-weight: bold;
         color: rgb(252, 148, 124);
     }
+    h2 {
+        font-size: 2.5em;
+        margin: 0;
+        padding: 0;
+        padding-left: 1%;
+        padding-bottom: 3%;
+        font-family: 'DM Mono';
+        font-weight: bold;
+        color: rgb(252, 148, 124);
+    }
+    h3 {
+        font-size: 1.1em;
+        margin: 0;
+        padding: 0;
+        padding-top: 4%;
+        font-family: 'DM Mono';
+        font-weight: bold;
+        color: rgb(252, 148, 124);
+    }
+    p {
+        font-size: 0.9em;
+        margin: 0;
+        padding: 0;
+        padding-left: 1%;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        font-family: 'DM Mono';
+        font-weight: normal;
+        color: rgb(252, 148, 124);
+    }
+    .custom-cursor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+        width: 30px;
+        height: 30px;
+    }
+    /* The following code for collapsibles has been taken and modified from W3Schools' demo page: https://www.w3schools.com/howto/howto_js_collapsible.asp/*/
+    .collapsible {
+        background-color: rgb(16, 13, 2);
+        color: rgb(252, 148, 124) ;
+        cursor: pointer;
+        padding-top: 2%;
+        padding-right: 5%;
+        padding-left: 5%;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-family: 'DM Mono';
+        font-weight: normal;
+        font-size: 1.5em;
+        cursor: url(Stamps.ico), pointer;
+    }
+    .active, .collapsible:hover {
+        background-color: rgb(16, 13, 2);
+    }
+    .collapsible:after {
+        content: '\002B';
+        color: rgb(252, 148, 124);
+        font-weight: normal;
+        float: right;
+        padding-left: 5%;
+    }
+    .active:after {
+        content: "\2212";
+        color: rgb(252, 148, 124);
+    }
+    .content {
+        padding-top: 1%;
+        padding-bottom: 1%;
+        padding-right: 5%;
+        padding-left: 5%;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.2s ease-in-out;
+        background-color: rgb(16, 13, 2);
+    }
+    hr.solid {
+        width: 99%;
+        border: 1.5px solid rgb(252, 148, 124);
+        opacity: 80%;   
+    }
+    hr.linebreak {
+        width: 99%;
+        border: 1.5px solid rgb(16, 13, 2);
+        opacity: 100%;   
+    }
+    img, video {
+        width: 450px;
+        height: 100%;
+        border-radius: 10px;
+    }
+    .research {
+        width: 1fr;
+        height: auto;
+        border-radius: 10px;
+    }
+    a {
+        background-color: rgb(16, 13, 2);
+        color: rgb(252, 148, 124);
+        text-decoration-color: rgb(16, 13, 2);
+        cursor: pointer;
+    }
+    .links {
+        color: rgb(252, 148, 124);
+        text-decoration: underline;
+    }
+    /*The following code for adding stroke to web text has been taken and modified from: https://css-tricks.com/adding-stroke-to-web-text/*/
+    a.homepage-navigation:hover {
+        -webkit-text-fill-color: rgb(16, 13, 2);
+        -webkit-text-stroke: rgb(252, 148, 124);
+        -webkit-text-stroke-width: 0.2px;
+    }
+    .flex-container {
+        display: flex;
+        gap: 2%;
+        flex-wrap: nowrap;
+        padding-top: 1.6%;
+        padding-bottom: 2%;
+        background-color: rgb(16, 13, 2);
+        text-align: left;
+        align-items: center;
+    }
+
+    .flow {
+        position: relative;
+        width: 100%;
+        margin-top: 4em;
+        -webkit-box-pack: center;
+    }
+    .flowboxes {
+        position: relative;
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        margin-top: 0px;
+        margin-right: auto;
+        margin-bottom: 2em;
+        margin-left: auto;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        row-gap: 10px;
+        column-gap: 10px;
+        justify-items: center;
+        font-family: 'DM Mono';
+        font-weight: normal;
+        font-size: 1em;
+    }
+    .floating-box {
+        width: 450px;
+        height: 100%;
+        margin: 0px;
+        text-align: left;
+        vertical-align: bottom;
+    }
+    img.case-study {
+        width: 450px;
+        height: 250px;
+        object-fit: cover;
+        cursor: url(Stamps.ico), pointer;
+     }
     </style>
 </head>
 <body>
-    <h1>This page is still a work-in-progress. Come back later.</h1>
+    <h1>Welcome to project 2C.<a class="homepage-navigation" href="https://aprilsofra.github.io/soaked-oats/">Click here to go back.</a></h1>
+
+    <hr class="solid">
+    <button class="collapsible">WOT'S_IN_THE_BOX?</button>
+    <div class="content">
+        <div class="flex-container">
+        <img src="Week_7.jpeg" alt="Image of activity">
+        <p>In week 7, we moved to the Telstra Creator Space to begin our Physical Computing module. Our first workshop involved an introduction to the Arduino and familiarising ourselves with the equipment in the kit that are typically used to run the micro-computer. This activity shows how my partner and I had organised the Arduino equipment and the corresponding labels we initially thought matched them. While we didn't end up using all of the equipment within the kit, it was pretty cool to see how all of these devices could work together to create a physical computing outcomes and installations.</p>
+        </div>
+    </div>
+
+    <hr class="solid">
+    <button class="collapsible">BLINK!</button>
+    <div class="content">
+        <div class="flex-container">
+        <video width="450px" controls loop>
+            <source src="Week_7.mov" type="video/mp4">
+            Your browser does not support HTML video.
+        </video>
+        <p>Also in week 7, we used Tinkercad to build circuits for in-class activities. This first exercise allowed me to learn the function of positive and negative outputs, as well as the resistors which regulate the flow of electrical current within the circuit. This video shows my partner and I achieving the BLINK! activity where a pot (potentiometer) light dimmer is used to either increase or decrease the level of light produced by the LED. Although a simple exercise, it was really interesting to understand how important the placement of certain objects, and especially wires, were when positioned in the breadboard to produce the right outcome for the circuit.</p>
+        </div>
+    </div>
+
+    <hr class="solid">
+    <button class="collapsible">THEREMIN.</button>
+    <div class="content">
+        <div class="flex-container">
+            <video width="450px" controls loop>
+                <source src="Week_8.1.mov" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+        <p> In week 8, we looked closer into the components of physical computing and specifically the integration of sensors within touch-sensitive circuits. This video displays our in-class attempt at reproducing the likes of the Theremin - a musical instrument which can be played without being touched, manipulated and produced by the electromagnetic fields of antennas. This activity uses an LDR circuit, involving resistors and photoresistors to sense touch, connect, and produce sound from the piezo. While my group struggled a lot to achieve a consistent output of sound from the circuit, we were able to understand how certain equipment with Arduino can be used to produce modes of touch capture.</p>
+        </div>
+    </div>
+
+    <hr class="solid">
+    <button class="collapsible">TOUCH!</button>
+    <div class="content">
+        <div class="flex-container">
+            <video width="450px" controls loop>
+                <source src="Week_8.2.mov" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+        <p>As an extension of the THEREMIN activity, my group continued to explore outcomes for touch capture through testing engagement with a photoresistor to produce rotation from a micro server. Here, this type of resistor essentially acted as a sensor for movement to signal activation of the server, ultimately allowing the circuit to stop and start depending on the photoresistor's ability to sense nearby movement. This photosensitive servo circuit, as shown in the corresponding video, was not only super fun to play with but definitely produced a more consistent outcome as opposed to the LDR circuit.</p>
+        </div>
+    </div>
+
+    <hr class="solid">
+    <button class="collapsible">MAGIC_MUSIC.</button>
+    <div class="content">
+        <div class="flex-container">
+            <video width="450px" controls loop>
+                <source src="Week_8.4.mov" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+        <p>Perhaps one of my favourite exercises for the physical computing module, was the captive music machine circuit that involved sound to be produced through inanimate objects. As shown in the video, my partner and I chose an orange, potato, and ball of tinfoil in order to produce an array of varying tonalities. As you can see, my partner uses touch capture to elicit music from each of the objects. These are produced through the resistors which connecting wires emit sound from the piezo. While this variation in tonalities was ultimately achieved, we still struggled to produce a consistent stream of sound through the tinfoil which you can clearly hear from my mini meltdown.</p>
+        </div>
+    </div>
+
+    <hr class="solid">
+    <button class="collapsible">CHINDOGU_ACTIVITY.</button>
+    <div class="content">
+        <div class="flex-container">
+        <img src="2C_Sketch_Scans-1.jpg" alt="Task 1 GIF">
+        </a>
+        <p>As a homework task for week 9, we constructed our own CHINDOGU inventions - concepts that appear to provide convenience but in essence lack any sense of practicality and purpose. This first sketch depicts an ice cream dispenser controlled by a robotic arm in which users are served by when coins are inserted into the machine. This robotic arm extends to pass the ice cream to the user, only to release its grip before the user can grab it. Of course, the ice cream drops to the ground, leaving the user with no ice cream to eat at all.</p>
+        </div>
+
+        <div class="flex-container">
+        <img src="2C_Sketch_Scans-2.jpg" alt="Task 1 GIF">
+        </a>
+        <p>This second sketch shows a contraption that involves an interactive alarm clock. As someone who hates how abrasive alarms can be to wake up to in the morning, the idea to be woken up in a more gentle way sounded like the obvious choice for exploration. Here, the sketch depicts a metal arm extending out of the alarm clock, moving towards the user's head. Attached to the end of the metal arm is a head scratcher that lengthens to eventually touch the user's head, supposedly waking them up from their sleep. While this sounds great in theory, I think the reality of it would only coerce people back into a deep sleep by relaxing them with the head scratcher. </p>
+        </div>
+    </div>
+
+    <hr class="solid">
+    <button class="collapsible">WORKING_WITH_P5.</button>
+    <div class="content">
+        <div class="flex-container">
+            <video width="450px" controls loop>
+                <source src="Week_9.3.mov" type="video/mp4">
+                Your browser does not support HTML video.
+            </video>
+        <p>Week 10 involved a brief introduction to the integration of physical computing processes with creative coding systems, such as p5.js. In this activity, a hosted p5 sketch was utilised alongside a serial port in order to connect the tactile functions of the Arduino to manipulate interactive elements within the digital sphere. This video demonstrates how I use a diode within my circuit to control the mapped data (depicted as a circle) within the p5 sketch.</p>
+        </div>
+    </div>
+    <hr class="solid">
+
+    <div class="flow">
+    <h2>Here are some errors I had to troubleshoot.</h2>
+    <br>
+    <div id="flowboxes" class="flowboxes">
+        <div class="floating-box">
+            <img src="Responsive_issue.gif" class="case-study" alt="Image of Case Study">
+            <hr class="linebreak">
+            </a>
+            <p>Paragraph here.</p>
+        </div>
+
+        <div id="flowboxes" class="flowboxes">
+        <div class="floating-box">
+            <img src="Screenshot_2025-05-21.jpg" class="case-study">
+            <hr class="linebreak">
+            </a>
+            <p>Paragraph here.</p>
+        </div>
+        </div>
+
+        <div id="flowboxes" class="flowboxes">
+        <div class="floating-box">
+            <img src="Responsive_issue.gif" class="case-study" alt="Image of Case Study">
+            <hr class="linebreak">
+            </a>
+            <p>Paragraph here.</p>
+        </div>
+        </div>
+    </div>
+
+    <div class="flow">
+    <h2>Here are some case studies that have influenced my work.<br>I think they're pretty cool.</h2>
+    <br>
+    <div id="flowboxes" class="flowboxes">
+        <div class="floating-box">
+            <a href="https://www.designboom.com/art/jakub-geltner-surveillance-cameras-curved-installations-exhibition-belgium-cultuurcentrum-de-steiger-menen-nest-05-01-2025/">
+            <img src="https://www.designboom.com/twitterimages/uploads/2025/04/nest-11-12-installations-jakub-geltner-designboom-1200.jpg" class="case-study" alt="Image of Case Study">
+            <h3>JAKUB_GELTNER.</h3>
+            </a>
+            <p>In his ongoing 'Nest' series, artist Jakub Geltner continues to explore the intersecting nature of industrial and organic entities. Utilising surveillance equipment and communication technologies, including cameras and antennas, the piece depicts manipulated surveillance equipment to appear curvilinear within a spatially dynamic format, speaking to the conflicting infrastructure and aesthetic arrangement posed by such technologies within gallery spaces. Geltner's continual exploration of surveillance systems, privacy, and censorship has had a lasting impact on my own design process and development. His artistic practice, which honours both the organic and industrial realm, has inspired a deeper exploration into the way in which people can and should be interacting with technological systems and devices.</p>
+        </div>
+
+        <div class="floating-box">
+            <a href="https://www.niklasroy.com/project/88/my-little-piece-of-privacy">
+            <img src="https://www.niklasroy.com/images/curtain_04.JPG" class="case-study" alt="Image of Case Study">
+            <h3>MY_LITTLE_PIECE_OF_PRIVACY.</h3>
+            </a>
+            <p>Niklas Roy is a Berlin-based artist interested in exploring a DIY approach to intersecting mediums of art, science, and technology throughout his work. This piece, in particular, is an installation work located within his studio, utilising technological intelligence and a small curtain to monitor activity and shield lurking eyes from the outside. This is achieved through the integration of a surveillance camera and computer to detect and locate passing pedestrians, and seeks to address notions of privacy and perception within a social context - by facilitating additional acts to conceal something, the object is only then become more aware of by others. I found Roy's work to be a simple, yet effective approach to physical computing that communicated a message of depth and meaning to ultimately demonstrate the irony of human behaviour and interaction.</p>
+        </div>
+
+        <div class="floating-box">
+            <a href="https://www.moritzsimongeist.com/works/hard-times-soft-sounds">
+            <img src="https://onassiswebdata.blob.core.windows.net/prod/original_images/Artwork_Photo.jpg" class="case-study" alt="Image of Case Study">
+            <h3>HARD_TIMES-SOFT_SOUNDS.</h3>
+            </a>
+            <p>An ASMR interactive experience, by Moritz Simon Geist, speaks to notions of transformation and the fragile nature of encapsulating beauty in stillness through an immersive engagement of the senses. Born during the pandemic, the piece invites a momentary escape from the reality of tumultuous and uncertain times to provide an evocative rhythm of the senses. The functionality of the sound sculpture relies on the tonality of a seashell, filled with water and gently rotated by a motor to generate an ever-evolving sound that brings tranquillity and peace to those who listen. For such a simple concept, this beautifully crafted work has allowed me to rethink the ways in which interactive installations can be used to provide peaceful experiences for users. It has also helped me to understand how an intersection of mediums within installation pieces can be utilised for acts of sensory engagement.</p>
+        </div>
+    </div>
+    </div>
+    <!--Copy and pasted directly from W3Schools' demo page for collapsibles-->
+    <script>
+        var coll = document.getElementsByClassName("collapsible");
+        var i;
+        for (i = 0; i < coll.length; i++) {
+          coll[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var content = this.nextElementSibling;
+            if (content.style.maxHeight){
+              content.style.maxHeight = null;
+            } else {
+              content.style.maxHeight = content.scrollHeight + "px";
+            } 
+          });
+        }
+        </script>
 </body>
 </html>
