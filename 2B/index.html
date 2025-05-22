@@ -14,6 +14,7 @@
     <style>
         *{
         background-color: rgb(16, 13, 2);
+        cursor: url(Stamps-2-pix.png) 35 55, auto;
     }
     
     h1 {
@@ -37,14 +38,6 @@
         font-weight: normal;
         color: rgb(252, 148, 124);
     }
-    .custom-cursor {
-        position: absolute;
-        top: 0;
-        left: 0;
-        display: none;
-        width: 30px;
-        height: 30px;
-    }
     /* The following code for collapsibles has been taken and modified from W3Schools' demo page: https://www.w3schools.com/howto/howto_js_collapsible.asp/*/
     .collapsible {
         background-color: rgb(16, 13, 2);
@@ -60,7 +53,7 @@
         font-family: 'DM Mono';
         font-weight: normal;
         font-size: 1.5em;
-        cursor: url(Stamps-2-pix.png), pointer;
+        cursor: url(Stamps-2-pix.png) 35 55, auto;
     }
     .active, .collapsible:hover {
         background-color: rgb(16, 13, 2);
@@ -105,13 +98,13 @@
     .links {
         color: rgb(252, 148, 124);
         text-decoration: underline;
+        cursor: pointer;
     }
     /*The following code for adding stroke to web text has been taken and modified from: https://css-tricks.com/adding-stroke-to-web-text/*/
     a.homepage-navigation:hover {
         -webkit-text-fill-color: rgb(16, 13, 2);
         -webkit-text-stroke: rgb(252, 148, 124);
         -webkit-text-stroke-width: 0.2px;
-
     }
     .flex-container {
         display: flex;
