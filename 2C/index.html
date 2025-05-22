@@ -14,6 +14,7 @@
     <style>
         *{
         background-color: rgb(16, 13, 2);
+        cursor: url(Stamps-2-pix.png) 35 55, auto;
     }
     
     h1 {
@@ -79,7 +80,7 @@
         font-family: 'DM Mono';
         font-weight: normal;
         font-size: 1.5em;
-        cursor: url(Stamps.ico), pointer;
+        cursor: url(Stamps-2-pix.png) 35 55, auto;
     }
     .active, .collapsible:hover {
         background-color: rgb(16, 13, 2);
@@ -134,6 +135,7 @@
     .links {
         color: rgb(252, 148, 124);
         text-decoration: underline;
+        cursor: pointer;
     }
     /*The following code for adding stroke to web text has been taken and modified from: https://css-tricks.com/adding-stroke-to-web-text/*/
     a.homepage-navigation:hover {
@@ -187,7 +189,13 @@
         width: 450px;
         height: 250px;
         object-fit: cover;
-        cursor: url(Stamps.ico), pointer;
+        cursor: pointer;
+    }
+    img.development {
+        width: 450px;
+        height: 250px;
+        object-fit: cover;
+        cursor: url(Stamps-2-pix.png) 35 55, auto;
     }
     </style>
 </head>
@@ -285,14 +293,14 @@
     <br>
     <div id="flowboxes" class="flowboxes">
         <div class="floating-box">
-            <img src="Responsive_issue.gif" class="case-study" alt="Image of Case Study">
+            <img src="Responsive_issue.gif" class="development">
             <hr class="linebreak">
             </a>
             <p>Issues with site responsiveness for the flex containers I set up.</p>
         </div>
 
         <div class="floating-box">
-            <img src="Screenshot_2025-05-21.jpg" class="case-study">
+            <img src="Screenshot_2025-05-21.jpg" class="development">
             <hr class="linebreak">
             </a>
             <p>Me trialling  photobooth functions using p5.js to potentially integrate into my landing page.</p>
