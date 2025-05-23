@@ -11,6 +11,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Noto+Sans+Mandaic&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
+    <script>
+    function delay (URL) {
+    setTimeout( function() { window.location = URL }, 5000 );
+    }
+    </script>
+
     <style>
         *{
         background-color: rgb(16, 13, 2);
@@ -165,12 +171,13 @@
         width: 100%;
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
         justify-content: center;
         margin-top: 0px;
         margin-right: auto;
         margin-bottom: 2em;
         margin-left: auto;
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(220px, 3 2, 1fr,));
         row-gap: 10px;
         column-gap: 35px;
         justify-items: center;
@@ -200,10 +207,15 @@
     </style>
 </head>
 <body>
+    <audio id="player1" src="../110010__tuberatanka__cat-meow-ii.wav"></audio>
+    <audio id="player2" src="../cat-meowing-low-vadi-sound-1-00-01.mp3"></audio>
+    <audio id="player3" src="../siamese-cat-meowing-joshua-chivers-1-00-01.mp3"></audio>
+    <audio id="player4" src="../cats-fighting-hissing-vadi-sound-1-00-02.mp3"></audio>
+
     <h1>Welcome to project 2C.<a class="homepage-navigation" href="https://aprilsofra.github.io/soaked-oats/">Click here to go back.</a></h1>
 
     <hr class="solid">
-    <button class="collapsible">WOT'S_IN_THE_BOX?</button>
+    <button class="collapsible" onclick="document.getElementById('player1').play()">WOT'S_IN_THE_BOX?</button>
     <div class="content">
         <div class="flex-container">
         <img src="Week_7.jpeg" alt="Image of activity">
@@ -212,7 +224,7 @@
     </div>
 
     <hr class="solid">
-    <button class="collapsible">BLINK!</button>
+    <button class="collapsible" onclick="document.getElementById('player2').play()">BLINK!</button>
     <div class="content">
         <div class="flex-container">
         <video width="450px" controls loop>
@@ -224,7 +236,7 @@
     </div>
 
     <hr class="solid">
-    <button class="collapsible">THEREMIN.</button>
+    <button class="collapsible" onclick="document.getElementById('player3').play()">THEREMIN.</button>
     <div class="content">
         <div class="flex-container">
             <video width="450px" controls loop>
@@ -236,7 +248,7 @@
     </div>
 
     <hr class="solid">
-    <button class="collapsible">TOUCH!</button>
+    <button class="collapsible" onclick="document.getElementById('player4').play()">TOUCH!</button>
     <div class="content">
         <div class="flex-container">
             <video width="450px" controls loop>
@@ -248,7 +260,7 @@
     </div>
 
     <hr class="solid">
-    <button class="collapsible">MAGIC_MUSIC.</button>
+    <button class="collapsible" onclick="document.getElementById('player2').play()">MAGIC_MUSIC.</button>
     <div class="content">
         <div class="flex-container">
             <video width="450px" controls loop>
@@ -260,7 +272,7 @@
     </div>
 
     <hr class="solid">
-    <button class="collapsible">CHINDOGU_ACTIVITY.</button>
+    <button class="collapsible" onclick="document.getElementById('player1').play()">CHINDOGU_ACTIVITY.</button>
     <div class="content">
         <div class="flex-container">
         <img src="2C_Sketch_Scans-1.jpg" alt="Task 1 GIF">
@@ -268,7 +280,7 @@
         <p>As a homework task for week 9, we constructed our own CHINDOGU inventions - concepts that appear to provide convenience but in essence lack any sense of practicality and purpose. This first sketch depicts an ice cream dispenser controlled by a robotic arm in which users are served by when coins are inserted into the machine. This robotic arm extends to pass the ice cream to the user, only to release its grip before the user can grab it. Of course, the ice cream drops to the ground, leaving the user with no ice cream to eat at all.</p>
         </div>
 
-        <div class="flex-container">
+        <div class="flex-container" onclick="document.getElementById('player4').play()">
         <img src="2C_Sketch_Scans-2.jpg" alt="Task 1 GIF">
         </a>
         <p>This second sketch shows a contraption that involves an interactive alarm clock. As someone who hates how abrasive alarms can be to wake up to in the morning, the idea to be woken up in a more gentle way sounded like the obvious choice for exploration. Here, the sketch depicts a metal arm extending out of the alarm clock, moving towards the user's head. Attached to the end of the metal arm is a head scratcher that lengthens to eventually touch the user's head, supposedly waking them up from their sleep. While this sounds great in theory, I think the reality of it would only coerce people back into a deep sleep by relaxing them with the head scratcher. </p>
@@ -276,7 +288,7 @@
     </div>
 
     <hr class="solid">
-    <button class="collapsible">WORKING_WITH_P5.</button>
+    <button class="collapsible" onclick="document.getElementById('player3').play()">WORKING_WITH_P5.</button>
     <div class="content">
         <div class="flex-container">
             <video width="450px" controls loop>
@@ -296,21 +308,21 @@
             <img src="Screenshot_2025-05-23.jpg" class="development">
             <hr class="linebreak">
             </a>
-            <p>Debugging the capture sketch to include face tracking features. I soon worked out that I needed to download and install the <a class="links" href="https://github.com/auduno/clmtrackr" target="_blank">CLM Tracker Library</a> into p5.js.</p>
+            <p>Debugging the capture sketch to include face tracking features for the cat filter I wanted to integrate into the webcam popup. I soon worked out that I needed to download and install the <a class="links" href="https://github.com/auduno/clmtrackr" target="_blank">CLM Tracker Library</a> into p5.js for the sketch to appear.</p>
         </div>
 
         <div class="floating-box">
             <img src="Responsive_issue.gif" class="development">
             <hr class="linebreak">
             </a>
-            <p>Issues with site responsiveness for the flex containers I set up. In all honesty, I am still struggling to achieve this.</p>
+            <p>Issues with site responsiveness for the flex containers I set up. I have resolved this by using flex-wrap for contents within the containers to adjust to the browser width.</p>
         </div>
 
         <div class="floating-box">
             <img src="Screenshot_2025-05-21.jpg" class="development">
             <hr class="linebreak">
             </a>
-            <p>Me trialling  photobooth functions using p5.js to potentially integrate into my landing page. I didn't end up integrating this feature as I wanted to stick to the cat theme I already had going.</p>
+            <p>Me trialling photobooth functions using p5.js to potentially integrate into my landing page. I didn't end up executing this feature as I wanted to stick to the cat theme I already had going.</p>
         </div>
     </div>
 
@@ -342,6 +354,30 @@
             <h3>HARD_TIMES-SOFT_SOUNDS.</h3>
             </a>
             <p>An ASMR interactive experience, by Moritz Simon Geist, speaks to notions of transformation and the fragile nature of encapsulating beauty in stillness through an immersive engagement of the senses. Born during the pandemic, the piece invites a momentary escape from the reality of tumultuous and uncertain times to provide an evocative rhythm of the senses. The functionality of the sound sculpture relies on the tonality of a seashell, filled with water and gently rotated by a motor to generate an ever-evolving sound that brings tranquillity and peace to those who listen. For such a simple concept, this beautifully crafted work has allowed me to rethink the ways in which interactive installations can be used to provide peaceful experiences for users. It has also helped me to understand how an intersection of mediums within installation pieces can be utilised for acts of sensory engagement.</p>
+        </div>
+
+        <div class="floating-box">
+            <a href="https://www.designboom.com/design/indikator-interactive-sonic-bench-human-touch-sound-anders-hellsten-nissen-can-touch-this-studio-02-12-2025/">
+            <img src="https://static.designboom.com/wp-content/dbsub/460779/2025-02-11/indikator-a-sound-responsive-public-installation-1-67ab7183c16b0.jpeg" class="case-study" alt="Image of Case Study">
+            <h3>INDIKATOR.</h3>
+            </a>
+            <p>Designed by Andres Hellsten, Indikator, is a modular, mobile installation that explores the generation of sound through the act of human touch. Utilising tactile engagement with urban design, the installation piece generates dynamic soundscapes that are personalised to the user and the level of physical involvement that is collaboratively produced. Upon finding this installation piece, I found it's unique approach to audio generation and user engagement as an interesting aspect of interactive design that spoke to previous workshops in physical computing. Particularly from a musical engineering perspective, I found the functionality of the installation piece to offer a refreshing and contemporary approach to previous modes of generative sound, such as the Theremin, that explore the ongoing collaboration between human- and machine-based entities within the creative sphere.</p>
+        </div>
+
+        <div class="floating-box">
+            <a href="https://whitney.org/exhibitions/harold-cohen-aaron">
+            <img src="https://whitneymedia.org/assets/image/829164/large_RS73495_Harold-Cohen-AARON-for-KCat-2021_web.jpg" class="case-study" alt="Image of Case Study">
+            <h3>AARON.</h3>
+            </a>
+            <p>Known as the earliest invention of artificial intelligence for artmaking processes, Harold Cohen's, AARON, is a software programmed to create images through an engagement with analogue mediums such as drawing and painting. Developed by testing handcrafted monitors and painting machines to create automated line drawings and brush strokes on paper, Cohen's work explores the concept of replicating creative practices through AI. This particular work of Harold Cohen is incredibly impressive to me and stands as an important historical artefact within interactive design in understanding the ways in which AI can be manipulated and utilised within a creative sphere. In doing so, it has helped me to gain a deeper understanding of the algorithmic gaze, and how, as designers, we can learn to work alongside machines to articulate our perceptions of reality.</p>
+        </div>
+
+        <div class="floating-box">
+            <a href="https://www.postcards-from-google-earth.com/">
+            <img src="https://www.postcards-from-google-earth.com/content/PfGE/deceptionpass/PfGE_deceptionpass_20070527.jpg" class="case-study" alt="Image of Case Study">
+            <h3>POSTCARDS_FROM_GOOGLE_EARTH.</h3>
+            </a>
+            <p>Collecting images from Google Earth screen grabs, Clement Valla's 2011-13 work, 'Postcards from Google Earth', depicts distorted representations of Earth's surface to reveal the flawed reality of technological databases. This ironic activity enables users to become attuned to the software itself rather than the photographic representation posed by the database. In doing so, she aims to draw closer attention to the process of automated data collections that are often materialised by machine-based algorithms. Valla's work offers a deeply insightful view into the way in which digital databases and systems are constructing our perspective of reality. Her approach to scrapism offered a simple yet effective representation of the way these machine-based algorithms have materialised and dictated what we have come to understand the world as we know it..</p>
         </div>
     </div>
     </div>
