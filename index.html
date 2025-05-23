@@ -14,6 +14,12 @@
     <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
     <script language="javascript" type="text/javascript" src="Week_5_Workshop.js"></script>
 
+    <script>
+    function delay (URL) {
+    setTimeout( function() { window.location = URL }, 5000 );
+    }
+    </script>
+
 <style>
     *{
         background-color: rgb(252, 148, 124);
@@ -92,6 +98,11 @@
 </head>
 
 <body>
+    <audio id="player1" src="../110010__tuberatanka__cat-meow-ii.wav"></audio>
+    <audio id="player2" src="../cat-meowing-low-vadi-sound-1-00-01.mp3"></audio>
+    <audio id="player3" src="../siamese-cat-meowing-joshua-chivers-1-00-01.mp3"></audio>
+    <audio id="player4" src="../cats-fighting-hissing-vadi-sound-1-00-02.mp3"></audio>
+
     <h1>Hello World. Welcome to my folio for Interactive Media.</h1>
     <div>
         <iframe src="Updated_Capture/index.html"></iframe>
@@ -99,21 +110,22 @@
     <div class="page-navigation">
     <!--The following code has been taken and modified from isobell's github: https://isoebell.github.io/Interactive/2b.html-->
         <div class="button">
-            <a href="https://aprilsofra.github.io/interactive-med/">2A</a>
+            <a href="https://aprilsofra.github.io/interactive-med/" onclick="document.getElementById('player1').play()">2A</a>
         </div>
 
-        <div class="button">
+        <div class="button" onclick="document.getElementById('player2').play()">
             <a href="2B/index.html">2B</a>
         </div>
 
         <div class="button">
-            <a href="2C/index.html">2C</a>
+            <a href="2C/index.html" onclick="document.getElementById('player3').play()">2C</a>
         </div>
 
         <div class="button">
-            <a href="Research/index.html">PERSONAL</a>
+            <a href="Personal_Project/index.html" onclick="document.getElementById('player4').play()">PERSONAL</a>
         </div>
     </div>
     <h2>April Sofra. 1463700. Semester 1, 2025.</h2>
+
 </body>
 </html>
