@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
+  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="libraries/p5.easycam.min.js"></script>
+  <script language="javascript" type="text/javascript" src="Personal_Project_HTML.js"></script>
+  <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
+  
+<title>Atatürk Blvd.</title>
+<style>
+    *{
+      margin: 0;
+      padding: 0;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .pop-up {
+      margin: auto;
+      justify-content: center;
+      align-items: center;
+    }
+      
+    #pop-up1 {
+      animation-delay: 0s;
+      z-index: 3;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: rgb(193, 39, 45);
+      background-color: black;
+      font-size: 1.8em;
+      opacity: 0;
+      animation: fadeInOut 10s ease forwards;
+      pointer-events: none;
+    }
+
+    #pop-up2 {
+      animation-delay: 10s;
+      z-index: 2;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: rgb(193, 39, 45);
+      background-color: black;
+      font-size: 1.8em;
+      opacity: 0;
+      animation: fadeInOut 20s ease forwards;
+      pointer-events: none;
+    }
+
+    #pop-up3 {
+      animation-delay: 20s;
+      z-index: 1;
+      width: 100vw;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: rgb(193, 39, 45);
+      background-color: black;
+      font-size: 1.8em;
+      opacity: 0;
+      animation: fadeInOut 30s ease forwards;
+      pointer-events: none;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+  </style>
+  
+</head>
+<body>
+
+<div id="pop-up1" class="pop-up">
+Since he came to power in 1923, Mustafa Kemal Atatürk served as a revoluntionary figure within Turkey, establising the country not only as a republic, but one that is fundamentally laic in nature. Within an conservative Ottoman era, Atatürk’s policies and beliefs promised a new way of life for the country that centered around modernity, freedom, and independence. With an overarching focus on national unity, Atatürk brought about transformative policies that harnessed social and political reform across the country.
+</div>
+
+<div id="pop-up2" class="pop-up">
+His untimely death in 1938 saw significant ramifications to Turkey’s social order and government systems that have since attempted to erase the modernist ideal Atatürk worked so hard to establish. Despite these acts of cultural regression enforced across the country, Atatürk’s presence remains alive and well, and stands as an active reminder of the visions and dreams he and so many others worked towards achieving.
+</div>
+<div id="pop-up3" class="pop-up">
+Having visited Turkey for the first time with my mum last year, I found Atatürk’s presence to be an embelmatic form of resistance and power within such a fragile political system.
+</div>
+
+</body>
+</html>
