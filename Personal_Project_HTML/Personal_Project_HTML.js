@@ -12,9 +12,9 @@ let pic9;
 let pic10;
 var pics
 
-let scrollZ = 0; // keeps track of how much we scroll
-let scrollSpeed = 0.5;
-let scrollDelay = 30000; // 30 seconds in milliseconds
+//let scrollZ = 0; // keeps track of how much we scroll
+//let scrollSpeed = 0.5;
+//let scrollDelay = 30000; // 30 seconds in milliseconds
 
 var sizeVariable;
 //var leadingVariable;
@@ -121,13 +121,14 @@ function setup() {
 
 function draw() {
   background(0);
-  if (millis() > scrollDelay) {
-  scrollZ += scrollSpeed;
-  }
-  if (scrollZ > 1000) {
-  scrollZ = 0; // restart scroll
-  }
-  translate(0, 0, -620 + scrollZ); // Reverse scroll
+  translate(0,0,-620);
+  //if (millis() > scrollDelay) {
+  //scrollZ += scrollSpeed;
+  //}
+  //if (scrollZ > 1000) {
+  //scrollZ = 0; // restart scroll
+  //}
+  //translate(0, 0, -620 + scrollZ); // Reverse scroll
   
   push();
   translate(0,0,1000);
